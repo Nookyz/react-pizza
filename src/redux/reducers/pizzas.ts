@@ -1,13 +1,12 @@
-import {PizzasActionTypes} from '../types/actions'
+import {PizzasActionTypes, PizzasAction} from '../types/actions'
 import {IPizzaState} from '../types/Pizzas'
-import {PizzasAction} from '../types/actions'
 
 const initialState: IPizzaState = {
   pizzas: null,
   isReady: false,
 }
 
-export const pizzasReducer = (state = initialState, action: PizzasAction) => {
+export const pizzasReducer = (state = initialState, action: PizzasAction): IPizzaState => {
 
   switch(action.type){
     case PizzasActionTypes.SET_PIZZAS:

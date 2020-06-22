@@ -15,6 +15,10 @@ import {
   MyCardFooterPrice,
 } from './PizzaCard.styled'
 import {Pizzas} from '../../redux/types/Pizzas'
+import { useSelector, useDispatch } from 'react-redux'
+import {addToCart} from '../../redux/actions/cart'
+import {PizzasCart} from '../../redux/types/Cart'
+import {AppState} from '../../redux/configureStore'
 
 interface IPizzaCardProps {
   pizza: Pizzas[]
@@ -26,8 +30,38 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
 
   const [pizzaItem, setPizzaItem] = useState(1)
   const [pizzaCard, setPizzaCard] = useState<Pizzas>(pizza[pizzaItem])
-  const [inCart, setInCart] = useState([false,false,false])
   
+  const items = useSelector((state: AppState) => state.cart.items)
+  const dispatch = useDispatch()
+
+  const inCartPizzaHandler = () => {
+    const pizza = items.find((pizza: PizzasCart) => pizza.id === pizzaCard.id)
+    if(pizza){
+      return pizza.inCart
+    }
+    return null
+  }
+
+  const quantityPizzaHandler = () => {
+    const pizza = items.find((pizza: PizzasCart) => pizza.id === pizzaCard.id)
+    if(pizza){
+      return pizza.quantity
+    }
+    return null
+  }
+
+  const addToCartHandler = () => {
+    dispatch(addToCart(pizzaCard))
+  }
+
+  useEffect(() => {
+    document.title = `Pizza`;
+  })
+
+  useEffect(() =>{
+    setPizzaCard(pizza[pizzaItem])
+  }, [pizzaItem, pizza])
+
   const addClass = (index: number) => {
     let cls = ['pizza-card__sizes-button']
 
@@ -37,24 +71,6 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
     
     return cls.join(' ')
   }
-
-  const inCartHandler = () => {
-    const newInCart = inCart.map((add, index) => index === pizzaItem ? true : add)
-    setInCart(newInCart)
-  }
-
-  const addToCartHandler = () => {
-    inCartHandler()
-  }
-  
-
-  useEffect(() => {
-    document.title = `Pizza`;
-  })
-
-  useEffect(() =>{
-    setPizzaCard(pizza[pizzaItem])
-  }, [pizzaItem, pizza])
   
 
   return (
@@ -92,11 +108,11 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
         </MyCardDescriptionSelectorSize>
 
         <MyCardFooter>
-          {inCart[pizzaItem] ?
+          {inCartPizzaHandler() ?
             <MyCardFooterAddButton>
               <div className='btn-wrap'>
-                <div className='quantity-control' >-</div>
-                <div>{1}</div>
+                <div className='quantity-control' onClick={() => console.log('delete')}>-</div>
+                <div>{quantityPizzaHandler()}</div>
                 <div className='quantity-control' onClick={() => addToCartHandler()}>+</div>
               </div> 
             </MyCardFooterAddButton>
