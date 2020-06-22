@@ -2,7 +2,7 @@ import {PizzasActionTypes, PizzasAction} from '../types/actions'
 import {IPizzaState} from '../types/Pizzas'
 
 const initialState: IPizzaState = {
-  pizzas: null,
+  pizzas: [],
   isReady: false,
 }
 

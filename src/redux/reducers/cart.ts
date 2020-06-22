@@ -34,6 +34,22 @@ export const cartReducer = (state = initialState, action: PizzasCartAction): IPi
         ...state,                                 
         items: [...state.items, newPizza],   
       }
+    case PizzasCartActionTypes.DELETE_FROM_CART:
+      return {
+        ...state,
+        items: state.items.map((item: PizzasCart) => {
+          if(item.id === action.payload){
+            item.quantity = item.quantity - 1
+            item.totalPrice = item.prize * item.quantity
+          }
+          return item
+        })
+      }
+    case PizzasCartActionTypes.REMOVE_FROM_CART:
+      return {
+        ...state,
+        items: state.items.filter(item => item.id !== action.payload),
+      }
     default:
       return state
   }

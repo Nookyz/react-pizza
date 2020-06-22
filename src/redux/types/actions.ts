@@ -14,7 +14,9 @@ export type PizzasAction = SetPizzasAction
 
 // Cart
 export enum PizzasCartActionTypes {
-  ADD_TO_CART = 'ADD_TO_CART'
+  ADD_TO_CART = 'ADD_TO_CART',
+  DELETE_FROM_CART = 'DELETE_FROM_CART',
+  REMOVE_FROM_CART = 'REMOVE_FROM_CART'
 }
 
 export type AddToCart = {
@@ -22,4 +24,14 @@ export type AddToCart = {
   payload: Pizzas
 }
 
-export type PizzasCartAction = AddToCart
+export type DeleteFromCard = {
+  type: typeof PizzasCartActionTypes.DELETE_FROM_CART
+  payload: number
+}
+
+export type RemoveFromCart = {
+  type: typeof PizzasCartActionTypes.REMOVE_FROM_CART
+  payload: number
+}
+
+export type PizzasCartAction = AddToCart | DeleteFromCard | RemoveFromCart

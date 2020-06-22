@@ -16,7 +16,7 @@ import {
 } from './PizzaCard.styled'
 import {Pizzas} from '../../redux/types/Pizzas'
 import { useSelector, useDispatch } from 'react-redux'
-import {addToCart} from '../../redux/actions/cart'
+import {addToCart, deleteFromCard, removeFromCard} from '../../redux/actions/cart'
 import {PizzasCart} from '../../redux/types/Cart'
 import {AppState} from '../../redux/configureStore'
 
@@ -34,7 +34,7 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
   const items = useSelector((state: AppState) => state.cart.items)
   const dispatch = useDispatch()
 
-  const inCartPizzaHandler = () => {
+  const inCartPizzaHandler = (): boolean | null => {
     const pizza = items.find((pizza: PizzasCart) => pizza.id === pizzaCard.id)
     if(pizza){
       return pizza.inCart
@@ -42,7 +42,7 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
     return null
   }
 
-  const quantityPizzaHandler = () => {
+  const quantityPizzaHandler = (): number | null  => {
     const pizza = items.find((pizza: PizzasCart) => pizza.id === pizzaCard.id)
     if(pizza){
       return pizza.quantity
@@ -52,6 +52,14 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
 
   const addToCartHandler = () => {
     dispatch(addToCart(pizzaCard))
+  }
+  
+  const deleteFromCartHandler = () => {
+    if(quantityPizzaHandler() === 1){
+      dispatch(removeFromCard(pizzaCard.id))
+    }else{
+      dispatch(deleteFromCard(pizzaCard.id))
+    }
   }
 
   useEffect(() => {
@@ -111,7 +119,7 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
           {inCartPizzaHandler() ?
             <MyCardFooterAddButton>
               <div className='btn-wrap'>
-                <div className='quantity-control' onClick={() => console.log('delete')}>-</div>
+                <div className='quantity-control' onClick={() => deleteFromCartHandler()}>-</div>
                 <div>{quantityPizzaHandler()}</div>
                 <div className='quantity-control' onClick={() => addToCartHandler()}>+</div>
               </div> 

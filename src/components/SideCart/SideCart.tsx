@@ -1,13 +1,16 @@
 import React from 'react'
 import { Hamburger } from '../Hamburger/Hamburger'
-//import {Cart} from '../Cart/Cart'
+import {Cart} from '../Cart/Cart'
 import { 
   MySideCart,
   MySideCartTitle,
-  //MySideCartOrder,
+  MySideCartOrder,
   MySideCartPrice
 
 } from './SideCart.styled'
+import { useSelector } from 'react-redux'
+import {AppState} from '../../redux/configureStore'
+import {PizzasCart} from '../../redux/types/Cart'
 
 interface ISideCartProps {
   sideCartRef: React.RefObject<HTMLDivElement> | null
@@ -21,8 +24,8 @@ export const SideCart: React.FC<ISideCartProps> = (props) => {
     openSideCart, 
     setOpenSideCart,
   } = props
-  
- 
+
+  const items = useSelector((state: AppState) => state.cart.items)
 
   return (
     <div ref={sideCartRef}>
@@ -39,23 +42,20 @@ export const SideCart: React.FC<ISideCartProps> = (props) => {
           </div>
 
         </MySideCartTitle>
-        {/* {items.length === 0 ? <h1>Корзина пустая</h1> :
-          items.map((item, index)=>{
-            return (
-              <Cart 
-              key={index}
-              item={item}
-              removeFromCart={removeFromCart}
-              addCountCart={addCountCart}
-              deleteCountCart={deleteCountCart}
-              updateCart={updateCart}
-              />)
-          })
-        } */}
+        
 
-        {/* <MySideCartOrder>
-          
-        </MySideCartOrder> */}
+        <MySideCartOrder>
+          {items.length === 0 ? <h1>Корзина пустая</h1> :
+            items.map((item: PizzasCart, index: number)=>{
+              return (
+                <Cart 
+                key={index}
+                item={item}
+                />
+              )
+            })
+          }
+        </MySideCartOrder>
 
         <MySideCartPrice>
 

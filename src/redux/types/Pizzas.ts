@@ -9,6 +9,6 @@ export interface Pizzas {
 }
 
 export interface IPizzaState {
-  readonly pizzas: Pizzas[][] | null
+  readonly pizzas: Pizzas[][] | []
   readonly isReady: boolean
 }
