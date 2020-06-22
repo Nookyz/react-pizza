@@ -18,7 +18,7 @@ const Pizza: React.FC<any> = (props) => {
 
   useEffect(()=>{
     dispatch(setPizzas(data))
-  }, [])
+  }, [dispatch])
 
   console.log(pizzas)
 

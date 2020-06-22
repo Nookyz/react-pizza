@@ -24,64 +24,92 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
 
   const {pizza} = props
 
+  const [pizzaItem, setPizzaItem] = useState(1)
+  const [pizzaCard, setPizzaCard] = useState<Pizzas>(pizza[pizzaItem])
+  const [inCart, setInCart] = useState([false,false,false])
+  
+  const addClass = (index: number) => {
+    let cls = ['pizza-card__sizes-button']
+
+    if(pizzaItem === index){
+      cls.push('active-btn-size')
+    }
+    
+    return cls.join(' ')
+  }
+
+  const inCartHandler = () => {
+    const newInCart = inCart.map((add, index) => index === pizzaItem ? true : add)
+    setInCart(newInCart)
+  }
+
+  const addToCartHandler = () => {
+    inCartHandler()
+  }
+  
+
   useEffect(() => {
     document.title = `Pizza`;
   })
+
+  useEffect(() =>{
+    setPizzaCard(pizza[pizzaItem])
+  }, [pizzaItem, pizza])
   
 
   return (
     <MyCard>
       
       <MyCardHeader>
-        <MyCardHeaderImg src={'img'} alt="img pizza" />
+        <MyCardHeaderImg src={pizzaCard.img} alt="img pizza" />
         <MyCardHeaderWeight>
-          {'pizzaGram'} г
+          {pizzaCard.gramm} г
         </MyCardHeaderWeight>
       </MyCardHeader>
 
       <MyCardDescription>
 
         <MyCardDescriptionTitle>
-          <h4>{'title'}</h4>
+          <h4>{pizzaCard.title}</h4>
         </MyCardDescriptionTitle>
 
         <MyCardDescriptionToppings>
           <span>
-            {'toppings'}
+            {pizzaCard.toppings.join(', ')}
           </span>
         </MyCardDescriptionToppings>
 
         <MyCardDescriptionSelectorSize>
-          {/* {sizes.map((item,index) =>(
+          {pizza.map((item,index) =>(
             <MyCardDescriptionSizeButton 
             key={index} 
             className={addClass(index)} 
-            onClick={() => selectSizes(index)}
+            onClick={() => setPizzaItem(index)}
             >
-              {item} 
+              {item.size} 
             </MyCardDescriptionSizeButton>
-          ))} */}
+          ))}
         </MyCardDescriptionSelectorSize>
 
-        {/* <MyCardFooter>
-          {!addedToCart[countIndex] ?
-            <MyCardFooterCartButton onClick={() => addToCardHandler()}>
-              В корзину
-            </MyCardFooterCartButton>
-            :
+        <MyCardFooter>
+          {inCart[pizzaItem] ?
             <MyCardFooterAddButton>
               <div className='btn-wrap'>
-                <div className='quantity-control' onClick={() => updateDecCardHandler()}>-</div>
-                <div>{'countPizza'}</div>
-                <div className='quantity-control' onClick={() => updateIncCardHandler()}>+</div>
+                <div className='quantity-control' >-</div>
+                <div>{1}</div>
+                <div className='quantity-control' onClick={() => addToCartHandler()}>+</div>
               </div> 
             </MyCardFooterAddButton>
-          } 
+            :
+            <MyCardFooterCartButton onClick={() => addToCartHandler()}>
+            В корзину
+          </MyCardFooterCartButton>
+          }
           <MyCardFooterPrice>  
-            <span>{'pizzaPrice'}&ensp;</span>
+            <span>{pizzaCard.prize}&ensp;</span>
             <span>грн</span>
           </MyCardFooterPrice>
-        </MyCardFooter> */}
+        </MyCardFooter>
         
       </MyCardDescription>
     </MyCard>
