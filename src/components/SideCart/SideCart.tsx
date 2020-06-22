@@ -4,7 +4,7 @@ import { Hamburger } from '../Hamburger/Hamburger'
 import { 
   MySideCart,
   MySideCartTitle,
-  MySideCartOrder,
+  //MySideCartOrder,
   MySideCartPrice
 
 } from './SideCart.styled'

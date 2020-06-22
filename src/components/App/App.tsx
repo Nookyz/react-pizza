@@ -6,12 +6,8 @@ import {Navbar} from '../Navbar/Navbar'
 import { SideNav } from '../SideNav/SideNav'
 import { SideCart } from '../SideCart/SideCart'
 import Pizza from '../../pages/Pizza/Pizza'
-import {Provider} from 'react-redux'
-
 
 const App: React.FC = (props: any) => {
-
-  
 
   const [openSideNav, setOpenSideNav] = useState<boolean>(false)
   const [openSideCart, setOpenSideCart] = useState<boolean>(false)
