@@ -26,6 +26,7 @@ export const SideCart: React.FC<ISideCartProps> = (props) => {
   } = props
 
   const items = useSelector((state: AppState) => state.cart.items)
+  const totalPrice = useSelector((state: AppState) => state.cart.totalPrice)
 
   return (
     <div ref={sideCartRef}>
@@ -60,7 +61,7 @@ export const SideCart: React.FC<ISideCartProps> = (props) => {
         <MySideCartPrice>
 
           <div className='price-result'>
-            <p>{0}</p>
+            <p>{totalPrice}</p>
           </div> 
 
           <button>Оформить</button>

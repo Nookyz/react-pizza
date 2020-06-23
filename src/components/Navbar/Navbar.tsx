@@ -9,6 +9,8 @@ import {
 } from './Navbar.styled'
 import { Hamburger } from '../Hamburger/Hamburger'
 import { NavLink } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import {AppState} from '../../redux/configureStore'
 
 interface INavbarProps {
   openSideNav: boolean
@@ -20,6 +22,8 @@ interface INavbarProps {
 export const Navbar: React.FC<INavbarProps> = (props) => {
   
   const {openSideNav, setOpenSideNav, openSideCart, setOpenSideCart} = props
+
+  const quantity = useSelector((state: AppState) => state.cart.quantity)
 
   return (
     <React.Fragment>
@@ -60,7 +64,7 @@ export const Navbar: React.FC<INavbarProps> = (props) => {
             <span className="material-icons cart">
               shopping_cart
             </span>
-            {0}
+            {quantity}
           </MyHeaderCart>
 
         </MyHeaderContent>

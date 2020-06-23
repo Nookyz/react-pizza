@@ -13,4 +13,6 @@ export interface PizzasCart {
 
 export interface IPizzasCartState {
   readonly items: PizzasCart[]
+  readonly quantity: number
+  readonly totalPrice: number
 }

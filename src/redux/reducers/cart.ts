@@ -2,7 +2,9 @@ import {PizzasCartActionTypes, PizzasCartAction} from '../types/actions'
 import {PizzasCart, IPizzasCartState} from '../types/Cart'
 
 const initialState: IPizzasCartState = {
-  items: []
+  items: [],
+  quantity: 0,
+  totalPrice: 0
 }
 
 export const cartReducer = (state = initialState, action: PizzasCartAction): IPizzasCartState => {
@@ -14,6 +16,8 @@ export const cartReducer = (state = initialState, action: PizzasCartAction): IPi
       if(existPizza){
         return {
           ...state,
+          quantity: state.quantity + 1,
+          totalPrice: state.totalPrice + existPizza.prize,
           items: state.items.map((item: PizzasCart) => {
             if(item.id === action.payload.id){
               item.quantity = item.quantity + 1
@@ -31,12 +35,18 @@ export const cartReducer = (state = initialState, action: PizzasCartAction): IPi
       }
       
       return {
-        ...state,                                 
+        ...state,
+        quantity: state.quantity + 1,
+        totalPrice: state.totalPrice + action.payload.prize,                            
         items: [...state.items, newPizza],   
       }
     case PizzasCartActionTypes.DELETE_FROM_CART:
+      const deletedPizza = state.items.find((item) => item.id === action.payload)
+      
       return {
         ...state,
+        quantity: state.quantity - 1,
+        totalPrice: state.totalPrice - deletedPizza!.prize, // 1!!
         items: state.items.map((item: PizzasCart) => {
           if(item.id === action.payload){
             item.quantity = item.quantity - 1
@@ -46,8 +56,12 @@ export const cartReducer = (state = initialState, action: PizzasCartAction): IPi
         })
       }
     case PizzasCartActionTypes.REMOVE_FROM_CART:
+      const removedPizza = state.items.find((item) => item.id === action.payload)
+
       return {
         ...state,
+        quantity: state.quantity - removedPizza!.quantity,
+        totalPrice: state.totalPrice - removedPizza!.totalPrice,
         items: state.items.filter(item => item.id !== action.payload),
       }
     default:
