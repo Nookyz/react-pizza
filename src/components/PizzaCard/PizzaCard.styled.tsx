@@ -152,6 +152,7 @@ export const MyCardFooterAddButton = styled.div`
 export const MyCardFooterPrice = styled.div`
   text-align: right;
   align-self: center;
+  color: #000;
   span:first-child{
     font-size: 22px;
   }

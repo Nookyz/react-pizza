@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import {header_height} from '../../global/variables'
+import {header_height, border_color} from '../../global/variables'
 
 export const MySideMenu = styled.div`
   top: 0;
@@ -10,7 +10,7 @@ export const MySideMenu = styled.div`
   position: fixed;
   z-index: 100;
   background-color: #fff;
-  border-right: 1px solid #e6e6e6;
+  border-right: 1px solid ${border_color};
   transition: transform 0.5s ease-in-out;
   transform: ${(props: { open: boolean }) => (props.open ? "translateX(0)" : "translateX(-100%)")};
 
@@ -20,7 +20,7 @@ export const MySideMenu = styled.div`
   }
 `
 export const MySideMenuTitle = styled.div`
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid ${border_color};
   background-color: #fff;
   height: ${header_height}px;
   padding: 10px;
@@ -33,25 +33,13 @@ export const MySideMenuTitle = styled.div`
       cursor: pointer;
     }
   }
-  .humburger{
-
-  }
 `
-export const MySideMenuToggle = styled.div`
-  border-bottom: 1px solid #e6e6e6;
-  background-color: #fff;
-  height: ${header_height}px;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-`
-
 export const MySideMenuNav = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 70%;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid ${border_color};
   .nav-link{
     height: 50px;
     display: flex;

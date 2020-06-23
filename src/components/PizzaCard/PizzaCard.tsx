@@ -126,8 +126,8 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
             </MyCardFooterAddButton>
             :
             <MyCardFooterCartButton onClick={() => addToCartHandler()}>
-            В корзину
-          </MyCardFooterCartButton>
+              В корзину
+            </MyCardFooterCartButton>
           }
           <MyCardFooterPrice>  
             <span>{pizzaCard.prize}&ensp;</span>

@@ -9,6 +9,7 @@ import Pizza from '../../pages/Pizza/Pizza'
 import { useDispatch } from 'react-redux'
 import data from '../../data'
 import {setPizzas} from '../../redux/actions/pizza'
+import { MyBlackout } from '../../global/MyBlackout.styled'
 
 const App: React.FC = (props: any) => {
 
@@ -47,6 +48,10 @@ const App: React.FC = (props: any) => {
       openSideCart={openSideCart}
       setOpenSideCart={setOpenSideCart}
       />
+
+      {openSideNav || openSideCart ?
+        <MyBlackout open={true}/> : null
+      }
 
       <Switch>
         <Route path='/' exact component={Pizza}/>

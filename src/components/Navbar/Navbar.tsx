@@ -63,8 +63,16 @@ export const Navbar: React.FC<INavbarProps> = (props) => {
           <MyHeaderCart onClick={() => setOpenSideCart(!openSideCart)}>
             <span className="material-icons cart">
               shopping_cart
+              {
+              quantity !== 0 ?
+              <div className='counter-qty'>
+              {quantity}
+            </div>
+            : null
+            }
             </span>
-            {quantity}
+            
+           
           </MyHeaderCart>
 
         </MyHeaderContent>

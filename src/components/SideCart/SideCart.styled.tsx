@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {header_height} from '../../global/variables'
+import {header_height, border_color} from '../../global/variables'
 
 export const MySideCart = styled.div`
   top: 0;
@@ -9,7 +9,7 @@ export const MySideCart = styled.div`
   position: fixed;
   z-index: 100;
   background-color: #fff;
-  border-left: 1px solid #e6e6e6;
+  border-left: 1px solid ${border_color};
   transition: transform 0.5s ease-in-out;
   transform: ${(props: { open: boolean }) => (props.open ? "translateX(0)" : "translateX(+100%)")};
 
@@ -22,7 +22,7 @@ export const MySideCart = styled.div`
   }
 `
 export const MySideCartTitle = styled.div`
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid ${border_color};
   background-color: #fff;
   height: ${header_height}px;
   padding: 10px;
@@ -42,18 +42,66 @@ export const MySideCartTitle = styled.div`
 `
 export const MySideCartOrder = styled.div`
   width: 100%;
-  
   background: #fff;
-  border-bottom: 1px solid #e6e6e6;
+  max-height: 740px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: pink;
+  ::-webkit-scrollbar { 
+    width: 4px; 
+  }
+  ::-webkit-scrollbar-thumb { 
+    height: 50px; 
+    background-color: pink; 
+    border-radius: 3px;
+  }
 `
-
-export const MySideCartPrice = styled.div`
+export const MySideCartFooter = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
+  border-top: 1px solid ${border_color};
   .price-result{
     display: flex;
     justify-content: flex-end;
     margin-bottom: 15px;
+    align-items: center;
+    p:last-child{
+      color: #ff6347;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+`
+export const MySideCartEmpty = styled.p`
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 24px;
+`
+
+export const MySideCartButton = styled.button`
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  background: pink;
+  outline: none;
+  border: 2px solid pink;
+  cursor: pointer;
+  transition: all .3s linear;
+  /* border: none;
+  width: 100%;
+  
+  
+  
+  
+  
+   */
+  
+  :hover{
+    border: 2px solid #c3c3c3;
+    background: rgba(255,192,203, .8)
   }
 `

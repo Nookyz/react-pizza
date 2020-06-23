@@ -5,7 +5,9 @@ import {
   MySideCart,
   MySideCartTitle,
   MySideCartOrder,
-  MySideCartPrice
+  MySideCartFooter,
+  MySideCartEmpty,
+  MySideCartButton
 
 } from './SideCart.styled'
 import { useSelector } from 'react-redux'
@@ -46,7 +48,7 @@ export const SideCart: React.FC<ISideCartProps> = (props) => {
         
 
         <MySideCartOrder>
-          {items.length === 0 ? <h1>Корзина пустая</h1> :
+          {items.length ? 
             items.map((item: PizzasCart, index: number)=>{
               return (
                 <Cart 
@@ -55,19 +57,30 @@ export const SideCart: React.FC<ISideCartProps> = (props) => {
                 />
               )
             })
+            : 
+            <MySideCartEmpty>
+              Корзина пустая
+            </MySideCartEmpty>
           }
         </MySideCartOrder>
 
-        <MySideCartPrice>
+        {
+          items.length ?
 
-          <div className='price-result'>
-            <p>{totalPrice}</p>
-          </div> 
+          <MySideCartFooter>
 
-          <button>Оформить</button>
+            <div className='price-result'>
+              <p>Сумма заказа:&nbsp;</p>
+              <p>{totalPrice}</p>
+            </div> 
 
-        </MySideCartPrice>
-        
+            <MySideCartButton>
+              Заказать
+            </MySideCartButton>
+
+          </MySideCartFooter>
+        : null
+        }
       </MySideCart>
     </div>
   )

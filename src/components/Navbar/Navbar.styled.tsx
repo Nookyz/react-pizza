@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import {header_height} from '../../global/variables'
+import {header_height, border_color} from '../../global/variables'
 
 export const MyHeader = styled.div`
   position: fixed;
@@ -11,8 +11,8 @@ export const MyHeader = styled.div`
   padding: 0 40px;
   justify-content: center;
   align-items: center;
-  background: rgba(255,255,255, 0.9);
-  border-bottom: 1px solid #e6e6e6;
+  background: #F0F0F0;
+  border-bottom: 1px solid ${border_color};
   @media screen and (max-width: 1024px){
     height: ${header_height*2}px;
     padding: 0;
@@ -42,7 +42,6 @@ export const MyHeaderContent = styled.div`
   
   @media screen and (max-width: 375px) {
     
-    
   }
 `
 export const MyHeaderLogo = styled.div`
@@ -59,7 +58,6 @@ export const MyHeaderLogo = styled.div`
   @media screen and (max-width: 375px) {
     
   }
-  
   .pizza{
     color: tomato;
     font-size: 50px;
@@ -130,7 +128,7 @@ export const MyHeaderCart = styled.div`
   height: 100%;
   position: relative;
   @media screen and (max-width: 1024px){
-    padding-right: 35px;
+    margin-right: 35px;
   }
   
   .cart{
@@ -142,169 +140,18 @@ export const MyHeaderCart = styled.div`
       cursor: pointer;
     }
   }
+  .counter-qty{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    border-radius: 50%;
+    background: #BCBEC0;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    font-size: 15px;
+    text-align: center;
+    padding: 2px 0;
+  }
   
 `
-
-///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-export const MyNav = styled.header`
-
-  .desktop-navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    display: flex;
-    height: ${header_height}px;
-    width: 100%;
-    padding: 0 40px;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255,255,255, 0.9);
-    border-bottom: 1px solid #e6e6e6;
-  } 
-    
-  
-  span{
-    height: 100%;
-    font-size: 30px;
-    display:flex;
-    align-items: center;
-    padding: 0 10px;
-    
-  }
-  span:hover{
-    cursor: pointer;    
-  }
-  
-  /* ---TOGGLE--- */
-  .header-toggle{
-    display:flex;
-    
-    .toggle:hover{
-      cursor: pointer;
-    }
-  }
-  .pizza{
-    color: tomato;
-    font-size: 32px;
-    margin-right: 30px;
-  }
-  
-  
-  /* ---NAVIGATION--- */
-  .header-nav{
-    display:flex;   
-    height: 100%;
-
-    .nav-link{
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      width: calc(100% + 25px);
-      a{
-        height: 100%;
-        padding: 15px;
-        text-decoration: none;    
-        color: pink;
-        cursor: pointer;
-      }
-      a:hover{
-          background-color: rgba(0,0,0, 0.1); 
-      }
-      .active{
-          color: black;
-      }
-    }
-  }
-  
-  
-  /* ---CART--- */
-  .header-cart{
-    color: tomato;
-    height: 100%;
-    position: relative;
-    :hover{
-      cursor: pointer;
-    }
-    
-  }        
-  /* ---CART_DROP--- */
-
-  /* ---MOBILE NAV--- */
-  .mobile-nav{
-    
-    .top-nav{
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 10;
-      display: flex;
-      height: ${header_height}px;
-      width: 100%;
-      padding: 0 40px;
-      justify-content: space-between;
-      align-items: center;
-      background-color: rgba(255,255,255, 0.9);
-      border-bottom: 1px solid #e6e6e6;
-    }
-    .bottom-nav{
-      position: fixed;
-      top: ${header_height}px;
-      left: 0;
-      right: 0;
-      z-index: 10;
-      display: flex;
-      height: ${header_height}px;
-      width: 100%;
-      padding: 0 40px;
-      justify-content: space-between;
-      align-items: center;
-      background-color: rgba(255,255,255, 0.9);
-      border-bottom: 1px solid #e6e6e6;
-    }
-  }
-
-  
-  @media screen and (min-width: 769px) {
-    
-    
-    .mobile-nav{
-      display: none;
-    } 
-  } 
-
-  @media screen and (max-width: 769px) {
-    
-    .pizza{
-      margin: 0;
-    }
-    .desktop-navbar{
-      display: none;
-      
-    } 
-  }
-  @media screen and (min-width: 375px){
-    
-  }
-  @media screen and (max-width: 375px) {
-      
-    .mobile-nav{
-      .top-nav{
-        padding: 0 20px;
-      }
-      .bottom-nav{
-        padding: 0;
-        
-      }
-    }  
-  }
-`
-
-
-
-
-
-
-

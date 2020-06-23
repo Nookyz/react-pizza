@@ -15,13 +15,15 @@ export const MyCartTitle = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
+  color: #000;
 `
 export const MyCartDelete = styled.button`
   height: 30px;
   width: 30px;
   border: 1px solid #e6e6e6;
   border-radius: 100px;
+  outline: none;
   span{
     padding-top: 2px;
   }
@@ -54,6 +56,7 @@ export const MyCartFooter = styled.div`
     align-items: center;
     display: grid;
     grid-template-columns: 30px 25px 30px;
+    color: #000;
     .quantity-control{
       width: 100%;
       height: 100%;
