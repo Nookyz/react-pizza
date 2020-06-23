@@ -4,6 +4,7 @@ import {
   MyCardHeader,
   MyCardHeaderImg,
   MyCardHeaderWeight,
+  MyCardHeaderInCart,
   MyCardDescription,
   MyCardDescriptionTitle,
   MyCardDescriptionToppings,
@@ -85,16 +86,28 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
     <MyCard>
       
       <MyCardHeader>
+
         <MyCardHeaderImg src={pizzaCard.img} alt="img pizza" />
+
         <MyCardHeaderWeight>
           {pizzaCard.gramm} г
         </MyCardHeaderWeight>
+
+        {
+          inCartPizzaHandler() &&
+          <MyCardHeaderInCart>
+            <span className="material-icons cart">
+              shopping_cart
+            </span>
+          </MyCardHeaderInCart>
+        }
+        
       </MyCardHeader>
 
       <MyCardDescription>
 
         <MyCardDescriptionTitle>
-          <h4>{pizzaCard.title}</h4>
+          <p>{pizzaCard.title}</p>
         </MyCardDescriptionTitle>
 
         <MyCardDescriptionToppings>
@@ -110,7 +123,7 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
             className={addClass(index)} 
             onClick={() => setPizzaItem(index)}
             >
-              {item.size} 
+              {item.size} {pizzaItem === index ? 'см' : null}
             </MyCardDescriptionSizeButton>
           ))}
         </MyCardDescriptionSelectorSize>

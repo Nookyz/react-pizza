@@ -1,5 +1,9 @@
 import styled from 'styled-components'
-import {header_height, border_color} from '../../global/variables'
+import {
+  header_height, 
+  border_color,
+  main_color
+} from '../../global/variables'
 
 export const MySideCart = styled.div`
   top: 0;
@@ -46,13 +50,13 @@ export const MySideCartOrder = styled.div`
   max-height: 740px;
   overflow-y: auto;
   overflow-x: hidden;
-  scrollbar-color: pink;
+  
   ::-webkit-scrollbar { 
     width: 4px; 
   }
   ::-webkit-scrollbar-thumb { 
     height: 50px; 
-    background-color: pink; 
+    background-color: ${main_color}; 
     border-radius: 3px;
   }
 `
@@ -67,7 +71,7 @@ export const MySideCartFooter = styled.div`
     margin-bottom: 15px;
     align-items: center;
     p:last-child{
-      color: #ff6347;
+      color: ${main_color};
       font-size: 24px;
       font-weight: 500;
     }
@@ -86,22 +90,14 @@ export const MySideCartButton = styled.button`
   border-radius: 24px;
   font-size: 18px;
   font-weight: 600;
-  background: pink;
+  background: ${main_color};
   outline: none;
   border: 2px solid pink;
   cursor: pointer;
   transition: all .3s linear;
-  /* border: none;
-  width: 100%;
-  
-  
-  
-  
-  
-   */
-  
+
   :hover{
     border: 2px solid #c3c3c3;
-    background: rgba(255,192,203, .8)
+    background: rgba(255, 99, 71, .7);
   }
 `

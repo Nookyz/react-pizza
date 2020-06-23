@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-import {header_height, border_color} from '../../global/variables'
+import {
+  header_height, 
+  border_color,
+  main_color
+} from '../../global/variables'
 
 export const MyHeader = styled.div`
   position: fixed;
@@ -59,7 +63,7 @@ export const MyHeaderLogo = styled.div`
     
   }
   .pizza{
-    color: tomato;
+    color: ${main_color};
     font-size: 50px;
     :hover{
       cursor: pointer;
@@ -109,7 +113,7 @@ export const MyHeaderNav = styled.div`
         height: 100%;
         padding: 15px;
         text-decoration: none;    
-        color: pink;
+        color: ${main_color};
         cursor: pointer;
       }
       a:hover{
@@ -134,7 +138,7 @@ export const MyHeaderCart = styled.div`
   .cart{
     padding-top: 5px;
     height: 100%;
-    color: tomato;
+    color: ${main_color};
     font-size: 40px;
     :hover{
       cursor: pointer;
@@ -153,5 +157,4 @@ export const MyHeaderCart = styled.div`
     text-align: center;
     padding: 2px 0;
   }
-  
 `

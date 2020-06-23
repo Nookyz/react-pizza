@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import {main_color} from '../../global/variables'
 
 export const MyCard = styled.div`
   width: 100%;
@@ -41,6 +41,21 @@ export const MyCardHeaderWeight = styled.div`
   right: 10px;
   font-size: 12px;
 `
+export const MyCardHeaderInCart = styled.div`
+  background: rgba(0, 0, 0, .3);
+  border-radius: 5px;
+  padding: 2px;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  span{
+    color: #fff;
+    font-size: 16px;
+  }
+`
 // Description
 
 export const MyCardDescription = styled.div`
@@ -50,10 +65,13 @@ export const MyCardDescription = styled.div`
 `
 
 export const MyCardDescriptionTitle = styled.div`
-  
+  p{
+    font-weight: 500;
+    font-size: 16px;
+  }
 `
 export const MyCardDescriptionToppings = styled.div`
-  height: 40px;
+  height: 42px;
   span{
     font-size: 13px;
   }
@@ -70,7 +88,7 @@ export const MyCardDescriptionSelectorSize = styled.div`
   
   .active-btn-size{
     background: #E6E7E8;
-    color: pink;
+    color: ${main_color};
     font-size: 15px;
     font-weight: bold;
     border: 1px solid rgba(0,0,0,.08);
@@ -90,10 +108,8 @@ export const MyCardDescriptionSizeButton = styled.button`
   cursor: pointer;
 
   :hover{     
-    color: pink;
+    color: ${main_color};
   }
-
-  
 `
 export const MyCardFooter = styled.div`
   display: grid;
@@ -107,7 +123,7 @@ export const MyCardFooterCartButton = styled.button`
   border: transparent;
   width: 100%;
   border-radius: 24px;
-  background: pink;
+  background: ${main_color};
   font-size: 18px;
   font-weight: bold;
   transition: all .3s linear;
@@ -116,7 +132,7 @@ export const MyCardFooterCartButton = styled.button`
   
   :hover{
     border: 2px solid #c3c3c3;
-    background: rgba(255,192,203, .8)
+    background: rgba(255, 99, 71, .7);
   }
 `
 export const MyCardFooterAddButton = styled.div`

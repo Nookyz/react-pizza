@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-import {header_height, border_color} from '../../global/variables'
+import {
+  header_height, 
+  border_color,
+  main_color
+} from '../../global/variables'
 
 export const MySideMenu = styled.div`
   top: 0;
@@ -27,7 +31,7 @@ export const MySideMenuTitle = styled.div`
   display: flex;
   justify-content: space-between;
   .pizza{
-    color: tomato;
+    color: ${main_color};
     font-size: 35px;
     :hover{
       cursor: pointer;
@@ -51,7 +55,7 @@ export const MySideMenuNav = styled.div`
       height: 100%;
       text-align: center;
       text-decoration: none;    
-      color: pink;
+      color: ${main_color};
       cursor: pointer;
     }
     a:hover{
