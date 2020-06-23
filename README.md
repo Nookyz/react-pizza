@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [Live demo](https://wizardly-mahavira-475855.netlify.app/)
 
-# React book store
+# React pizza
 
 ```bash
   npm install
