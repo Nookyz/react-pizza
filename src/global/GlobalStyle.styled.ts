@@ -14,37 +14,18 @@ export const GlobalStyle = createGlobalStyle`
     background: #F2F4F6;
   }
   .container{
-    margin: auto;
-    padding-top: ${header_height + 20}px;
-	  max-width: 70%;
-  }
-  @media screen and (max-width: 1480px){
-    .container{
-      margin: auto;
-      max-width: 80%;
-    }
-  }
-  @media screen and (max-width: 1280px){
-    .container{
-      margin: auto;
-      max-width: 75%;
-    }
+    display: flex;
+    flex-direction: column;
+    padding: ${header_height + 20}px 10% 20px 10%;
   }
   @media screen and (max-width: 1024px){
     .container{
-      margin: auto;
-      padding-top: ${header_height * 2 + 20}px;
-      max-width: 75%;
+      padding: ${header_height * 2 + 20}px 5% 20px 5%;
     }
   }
-  @media screen and (max-width: 769px){
-    
-  }
-  @media screen and (max-width: 600px) {
-    
+  @media screen and (max-width: 375px){
     .container{
-      margin: auto;
-      max-width: 90%;
+      padding: ${header_height * 2 + 20}px 2% 20px 2%;
     }
   }
 `
