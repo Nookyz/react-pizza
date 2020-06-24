@@ -2,7 +2,9 @@ import {Pizzas} from './Pizzas'
 
 // Pizzas
 export enum PizzasActionTypes {
-  SET_PIZZAS = 'SET_PIZZAS'
+  SET_PIZZAS = 'SET_PIZZAS',
+  FILTER_BY_LOW_PRICE = 'FILTER_BY_LOW_PRICE',
+  FILTER_BY_HIGH_PRICE = 'FILTER_BY_HIGH_PRICE'
 }
 
 export type SetPizzasAction = {
@@ -10,7 +12,15 @@ export type SetPizzasAction = {
   payload: Pizzas[][] 
 }
 
-export type PizzasAction = SetPizzasAction
+export type FilterByLowPrice = {
+  type: typeof PizzasActionTypes.FILTER_BY_LOW_PRICE
+}
+
+export type FilterByHighPrice = {
+  type: typeof PizzasActionTypes.FILTER_BY_HIGH_PRICE
+}
+
+export type PizzasAction = SetPizzasAction | FilterByLowPrice | FilterByHighPrice
 
 // Cart
 export enum PizzasCartActionTypes {

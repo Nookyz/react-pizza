@@ -234,59 +234,59 @@ export default [
   [
     {
       "id": 23,
-      "title": "Пицца Пепперони с томатами",
-      "toppings": ["Моцарелла", "Пепперони", "Помидоры", "Соус Барбекю"],
+      "title": "Пицца Пять Сыров",
+      "toppings": ["Фета", "Пармезан", "Бергадер Блю", "Моцарелла", "Соус Альфредо", "Чеддер"],
       "size": 30,
-      "gramm": 350,
-      "prize": 88,
-      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_mobile/2018/02/28/%D0%9F%D0%B5%D0%BF%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D0%B8_%D0%B8_%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D1%8B_300dpi-thumbnail-960x960-70.jpg"
+      "gramm": 343,
+      "prize": 183,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9F%D1%8F%D1%82%D1%8C_%D1%81%D1%8B%D1%80%D0%BE%D0%B2_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
       "id": 24,
-      "title": "Пицца Пепперони с томатами",
-      "toppings": ["Моцарелла", "Пепперони", "Помидоры", "Соус Барбекю"],
+      "title": "Пицца Пять Сыров",
+      "toppings": ["Фета", "Пармезан", "Бергадер Блю", "Моцарелла", "Соус Альфредо", "Чеддер"],
       "size": 35,
-      "gramm": 600,
-      "prize": 165,
-      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_mobile/2018/02/28/%D0%9F%D0%B5%D0%BF%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D0%B8_%D0%B8_%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D1%8B_300dpi-thumbnail-960x960-70.jpg"
+      "gramm": 605 ,
+      "prize": 260,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9F%D1%8F%D1%82%D1%8C_%D1%81%D1%8B%D1%80%D0%BE%D0%B2_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
       "id": 25,
-      "title": "Пицца Пепперони с томатами",
-      "toppings": ["Моцарелла", "Пепперони", "Помидоры", "Соус Барбекю"],
+      "title": "Пицца Пять Сыров",
+      "toppings": ["Фета", "Пармезан", "Бергадер Блю", "Моцарелла", "Соус Альфредо", "Чеддер"],
       "size": 40,
-      "gramm": 930,
-      "prize": 200,
-      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_mobile/2018/02/28/%D0%9F%D0%B5%D0%BF%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D0%B8_%D0%B8_%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D1%8B_300dpi-thumbnail-960x960-70.jpg"
+      "gramm": 823,
+      "prize": 290,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9F%D1%8F%D1%82%D1%8C_%D1%81%D1%8B%D1%80%D0%BE%D0%B2_300dpi-min-thumbnail-960x960-70.jpg"
     },
   ],
   [
     {
       "id": 26,
-      "title": "Пицца Маргарита",
-      "toppings": ["Моцарелла", "Соус Domino's"],
+      "title": "Пицца Шпинат и Фета",
+      "toppings": ["Фета", "Оливки", "Болгарский перец", "Грибы", "Моцарелла", "Помидоры", "Соус Альфредо", "Шпинат"],
       "size": 30,
       "gramm": 340,
-      "prize": 88,
-      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0_300dpi-min-thumbnail-960x960-70.jpg"
+      "prize": 183,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D1%88%D0%BF%D0%B8%D0%BD%D0%B0%D1%82%D1%84%D0%B5%D1%82%D0%B0_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
       "id": 27,
-      "title": "Пицца Маргарита",
-      "toppings": ["Моцарелла", "Соус Domino's"],
+      "title": "Пицца Шпинат и Фета",
+      "toppings": ["Фета", "Оливки", "Болгарский перец", "Грибы", "Моцарелла", "Помидоры", "Соус Альфредо", "Шпинат"],
       "size": 35,
       "gramm": 570,
-      "prize": 165,
-      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0_300dpi-min-thumbnail-960x960-70.jpg"
+      "prize": 260,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D1%88%D0%BF%D0%B8%D0%BD%D0%B0%D1%82%D1%84%D0%B5%D1%82%D0%B0_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
       "id": 28,
-      "title": "Пицца Маргарита",
-      "toppings": ["Моцарелла", "Соус Domino's"],
+      "title": "Пицца Шпинат и Фета",
+      "toppings": ["Фета", "Оливки", "Болгарский перец", "Грибы", "Моцарелла", "Помидоры", "Соус Альфредо", "Шпинат"],
       "size": 40,
       "gramm": 800,
-      "prize": 200,
-      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0_300dpi-min-thumbnail-960x960-70.jpg"
+      "prize": 290,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D1%88%D0%BF%D0%B8%D0%BD%D0%B0%D1%82%D1%84%D0%B5%D1%82%D0%B0_300dpi-min-thumbnail-960x960-70.jpg"
     },
   ]
 ]

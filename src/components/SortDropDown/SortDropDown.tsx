@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react'
 import {MyDropDown, MySortDropDown, MyPopup} from './SortDropDown.styled'
 import { useClose } from '../../hooks/close.hook'
+import { useDispatch } from 'react-redux'
+import {filterByLowPrice, filterByHighPrice} from '../../redux/actions/pizza'
 
 interface ISortDropDownProps {
   
@@ -12,6 +14,8 @@ export const SortDropDown: React.FC<ISortDropDownProps> = () => {
   const popupRef = useRef<HTMLDivElement | null>(null)
 
   useClose(popupRef, () => setOpenPopup(false))
+
+  const dispatch = useDispatch()
 
   return (
     <MyDropDown>
@@ -29,10 +33,10 @@ export const SortDropDown: React.FC<ISortDropDownProps> = () => {
 
       {openPopup &&
         <MyPopup ref={popupRef}>
-          <div className='popup-item' onClick={() => console.log('низкая-высокая')}>
+          <div className='popup-item' onClick={() => dispatch(filterByLowPrice())}>
             <span>Цена низкая-высокая</span>
           </div>
-          <div className='popup-item' onClick={() => console.log('высокая-низкая')}>
+          <div className='popup-item' onClick={() => dispatch(filterByHighPrice())}>
             <span>Цена высокая-низкая</span>
           </div>
         </MyPopup>
