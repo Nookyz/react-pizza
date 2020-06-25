@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const MyPizza = styled.div`
+export const MyFrame = styled.div`
   margin: 20px 0;
   display: grid;  
   grid-template-columns: repeat(4,minmax(250px,350px));
@@ -17,7 +17,4 @@ export const MyPizza = styled.div`
   @media screen and (max-width: 600px){
     grid-template-columns: minmax(250px,100%);
   }
-`
-export const MyPizzaToolBar = styled.div`
-  display: flex;
 `

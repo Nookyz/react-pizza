@@ -1,4 +1,4 @@
-import {PizzasActionTypes, PizzasAction} from '../types/actions'
+import {PizzasActionTypes, PizzasAction, FiltersActionTypes} from '../types/actions'
 import {IPizzaState} from '../types/Pizzas'
 
 const initialState: IPizzaState = {
@@ -15,12 +15,12 @@ export const pizzasReducer = (state = initialState, action: PizzasAction): IPizz
         pizzas: action.payload,
         isReady: true
       }
-    case PizzasActionTypes.FILTER_BY_LOW_PRICE:
+    case FiltersActionTypes.FILTER_BY_LOW_PRICE:
       return {
         ...state,
         pizzas: state.pizzas.sort((a, b) => a[1].prize - b[1].prize).map(p => p)
       }
-    case PizzasActionTypes.FILTER_BY_HIGH_PRICE:
+    case FiltersActionTypes.FILTER_BY_HIGH_PRICE:
       return {
         ...state,
         pizzas: state.pizzas.sort((a, b) => b[1].prize - a[1].prize).map(p => p)

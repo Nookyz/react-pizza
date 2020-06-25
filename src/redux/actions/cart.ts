@@ -1,9 +1,10 @@
 import {PizzasCartActionTypes} from '../types/actions'
 import {Pizzas} from '../types/Pizzas'
+import {Drinks} from '../types/Drinks'
 
-export const addToCart = (pizza: Pizzas) => ({
+export const addToCart = (item: Pizzas | Drinks) => ({
   type: PizzasCartActionTypes.ADD_TO_CART,
-  payload: pizza
+  payload: item
 })
 
 export const deleteFromCard = (id: number) => ({

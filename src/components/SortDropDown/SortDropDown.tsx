@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 import {MyDropDown, MySortDropDown, MyPopup} from './SortDropDown.styled'
 import { useClose } from '../../hooks/close.hook'
 import { useDispatch } from 'react-redux'
-import {filterByLowPrice, filterByHighPrice} from '../../redux/actions/pizza'
+import {filterByLowPrice, filterByHighPrice} from '../../redux/actions/filters'
 
 interface ISortDropDownProps {
   

@@ -14,29 +14,34 @@ import {
   MyCardFooterCartButton,
   MyCardFooterAddButton,
   MyCardFooterPrice,
-} from './PizzaCard.styled'
-import {Pizzas} from '../../redux/types/Pizzas'
+} from './Card.styled'
+// import {Pizzas} from '../../redux/types/Pizzas'
+// import {Drinks} from '../../redux/types/Drinks'
 import { useSelector, useDispatch } from 'react-redux'
 import {addToCart, deleteFromCard, removeFromCard} from '../../redux/actions/cart'
-import {PizzasCart} from '../../redux/types/Cart'
+import {ICart} from '../../redux/types/Cart'
 import {AppState} from '../../redux/configureStore'
+import { useHistory } from 'react-router-dom'
 
-interface IPizzaCardProps {
-  pizza: Pizzas[]
+interface ICardProps {
+  //itemsCard: Pizzas[] | Drinks[]
+  itemsCard: any
 }
 
-const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
+export const Card: React.FC<ICardProps> = (props) => {
 
-  const {pizza} = props
+  const {itemsCard} = props
 
-  const [pizzaItem, setPizzaItem] = useState(1)
-  const [pizzaCard, setPizzaCard] = useState<Pizzas>(pizza[pizzaItem])
+  const [cardIndex, setCardIndex] = useState(1)
+  const [cardItem, setCardItem] = useState<any>(itemsCard[cardIndex])
   
   const items = useSelector((state: AppState) => state.cart.items)
   const dispatch = useDispatch()
 
+  const history = useHistory()
+
   const inCartPizzaHandler = (): boolean | null => {
-    const pizza = items.find((pizza: PizzasCart) => pizza.id === pizzaCard.id)
+    const pizza = items.find((pizza: ICart) => pizza.id === cardItem.id)
     if(pizza){
       return pizza.inCart
     }
@@ -44,7 +49,7 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
   }
 
   const quantityPizzaHandler = (): number | null  => {
-    const pizza = items.find((pizza: PizzasCart) => pizza.id === pizzaCard.id)
+    const pizza = items.find((pizza: ICart) => pizza.id === cardItem.id)
     if(pizza){
       return pizza.quantity
     }
@@ -52,14 +57,14 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
   }
 
   const addToCartHandler = () => {
-    dispatch(addToCart(pizzaCard))
+    dispatch(addToCart(cardItem))
   }
   
   const deleteFromCartHandler = () => {
     if(quantityPizzaHandler() === 1){
-      dispatch(removeFromCard(pizzaCard.id))
+      dispatch(removeFromCard(cardItem.id))
     }else{
-      dispatch(deleteFromCard(pizzaCard.id))
+      dispatch(deleteFromCard(cardItem.id))
     }
   }
 
@@ -68,30 +73,32 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
   })
 
   useEffect(() =>{
-    setPizzaCard(pizza[pizzaItem])
-  }, [pizzaItem, pizza])
+    setCardItem(itemsCard[cardIndex])
+  }, [cardIndex, itemsCard])
 
   const addClass = (index: number) => {
     let cls = ['pizza-card__sizes-button']
 
-    if(pizzaItem === index){
+    if(cardIndex === index){
       cls.push('active-btn-size')
     }
     
     return cls.join(' ')
   }
   
-
   return (
     <MyCard>
       
       <MyCardHeader>
 
-        <MyCardHeaderImg src={pizzaCard.img} alt="img pizza" />
-
-        <MyCardHeaderWeight>
-          {pizzaCard.gramm} г
-        </MyCardHeaderWeight>
+        <MyCardHeaderImg src={cardItem.img} alt="img pizza" />
+        {history.location.pathname === '/' ?
+          <MyCardHeaderWeight>
+            {`${cardItem!.gramm} г`}
+          </MyCardHeaderWeight>
+        : null
+        }
+        
 
         {
           inCartPizzaHandler() &&
@@ -107,25 +114,39 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
       <MyCardDescription>
 
         <MyCardDescriptionTitle>
-          <p>{pizzaCard.title}</p>
+          <p>{cardItem.title}</p>
         </MyCardDescriptionTitle>
 
+        {cardItem.toppings &&
         <MyCardDescriptionToppings>
           <span>
-            {pizzaCard.toppings.join(', ')}
+            {cardItem.toppings.join(', ')}
           </span>
         </MyCardDescriptionToppings>
+        }
 
         <MyCardDescriptionSelectorSize>
-          {pizza.map((item,index) =>(
-            <MyCardDescriptionSizeButton 
-            key={index} 
-            className={addClass(index)} 
-            onClick={() => setPizzaItem(index)}
-            >
-              {item.size} {pizzaItem === index ? 'см' : null}
-            </MyCardDescriptionSizeButton>
-          ))}
+          {history.location.pathname === '/' ?
+            itemsCard.map((item: any, index: number) =>(
+              <MyCardDescriptionSizeButton 
+              key={index} 
+              className={addClass(index)} 
+              onClick={() => setCardIndex(index)}
+              >
+                {item.size} {cardIndex === index ? 'см' : null}
+              </MyCardDescriptionSizeButton>
+            ))
+          : 
+            itemsCard.map((item: any, index: number) =>(
+              <MyCardDescriptionSizeButton 
+              key={index} 
+              className={addClass(index)} 
+              onClick={() => setCardIndex(index)}
+              >
+                {item.volume} 
+              </MyCardDescriptionSizeButton>
+            ))
+        }
         </MyCardDescriptionSelectorSize>
 
         <MyCardFooter>
@@ -143,7 +164,7 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
             </MyCardFooterCartButton>
           }
           <MyCardFooterPrice>  
-            <span>{pizzaCard.prize}&ensp;</span>
+            <span>{cardItem.prize}&ensp;</span>
             <span>грн</span>
           </MyCardFooterPrice>
         </MyCardFooter>
@@ -152,4 +173,4 @@ const PizzaCard: React.FC<IPizzaCardProps> = (props) => {
     </MyCard>
   )
 }
-export default PizzaCard
+

@@ -1,5 +1,5 @@
 import React from 'react'
-import { MyCardFooterPrice } from '../PizzaCard/PizzaCard.styled'
+import { MyCardFooterPrice } from '../Card/Card.styled'
 import {
   MyCart,
   MyCartTitle,
@@ -7,12 +7,12 @@ import {
   MyCartDescription,
   MyCartFooter
 } from './Cart.styled'
-import {PizzasCart} from '../../redux/types/Cart'
+import {ICart} from '../../redux/types/Cart'
 import { useDispatch } from 'react-redux'
 import {addToCart, removeFromCard, deleteFromCard} from '../../redux/actions/cart'
 
 interface ICartProps {
-  item: PizzasCart
+  item: ICart
 }
 export const Cart: React.FC<ICartProps> = (props) => {
   const {item} = props
@@ -20,6 +20,7 @@ export const Cart: React.FC<ICartProps> = (props) => {
   const dispatch = useDispatch()
   
   const addToCartHandler = () => {
+    
     dispatch(addToCart(item))
   }
   
@@ -44,8 +45,9 @@ export const Cart: React.FC<ICartProps> = (props) => {
       </MyCartTitle>
 
       <MyCartDescription>
-        <p>{item.toppings.join(', ')}</p>
-        <span>{item.size}&ensp;см</span>
+        {item.toppings ? <p>{item.toppings.join(', ')}</p> : null}
+        {item.size ? <span>{item.size}&ensp;см</span> : null}
+        {item.volume ? <span>{item.volume}</span> : null}
       </MyCartDescription>
 
       <MyCartFooter>

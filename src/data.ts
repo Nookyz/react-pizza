@@ -1,4 +1,4 @@
-export default [
+export const pizzasData = [
   [
     {
       "id": 1,
@@ -287,6 +287,105 @@ export default [
       "gramm": 800,
       "prize": 290,
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D1%88%D0%BF%D0%B8%D0%BD%D0%B0%D1%82%D1%84%D0%B5%D1%82%D0%B0_300dpi-min-thumbnail-960x960-70.jpg"
+    },
+  ]
+]
+
+export const drinksData = [
+  [
+    {
+      "id": 29,
+      "title": "Pepsi",
+      "volume": '500 мл',
+      "prize": 35,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Pepsi_05L_Blue-thumbnail-960x960.png"
+    },
+    {
+      "id": 30,
+      "title": "Pepsi",
+      "volume": '1 л',
+      "prize": 40,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Pepsi_05L_Blue-thumbnail-960x960.png"
+    },
+  ],
+  [
+    {
+      "id": 31,
+      "title": "7 Up",
+      "volume": '500 мл',
+      "prize": 35,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/7up_05L_Fido_Dido_01__2019_04_04-thumbnail-960x960.png"
+    },
+    {
+      "id": 32,
+      "title": "7 Up",
+      "volume": '1 л',
+      "prize": 40,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/7up_05L_Fido_Dido_01__2019_04_04-thumbnail-960x960.png"
+    },
+  ],
+  [
+    {
+      "id": 33,
+      "title": "Mirinda Апельсин",
+      "volume": '500 мл',
+      "prize": 35,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Mirinda_05L_orange-thumbnail-960x960.png"
+    },
+    {
+      "id": 34,
+      "title": "Mirinda Апельсин",
+      "volume": '1 л',
+      "prize": 40,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Mirinda_05L_orange-thumbnail-960x960.png"
+    },
+  ],
+  [
+    {
+      "id": 35,
+      "title": "Aqua Minerale",
+      "volume": '500 мл',
+      "prize": 24,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Aqua_Minerale_05_gaz-thumbnail-960x960.png"
+    },
+    {
+      "id": 36,
+      "title": "Aqua Minerale",
+      "volume": '1 л',
+      "prize": 30,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Aqua_Minerale_05_gaz-thumbnail-960x960.png"
+    },
+  ],
+  [
+    {
+      "id": 37,
+      "title": "Lipton Ice Tea Лимон",
+      "volume": '500 мл',
+      "prize": 31,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Lipton_05_lemon-thumbnail-960x960.png"
+    },
+    {
+      "id": 38,
+      "title": "Lipton Ice Tea Лимон",
+      "volume": '1 л',
+      "prize": 41,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Lipton_05_lemon-thumbnail-960x960.png"
+    },
+  ],
+  [
+    {
+      "id": 39,
+      "title": "Яблочный сок Sandora",
+      "volume": '500 мл',
+      "prize": 35,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Sandora-950-Apple_Engle_copy-thumbnail-960x960.png"
+    },
+    {
+      "id": 40,
+      "title": "Яблочный сок Sandora",
+      "volume": '1 л',
+      "prize": 50,
+      "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Sandora-950-Apple_Engle_copy-thumbnail-960x960.png"
     },
   ]
 ]

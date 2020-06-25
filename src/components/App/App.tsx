@@ -1,15 +1,14 @@
-import React, {useState, useRef, useEffect} from 'react'
-import { Switch, Route } from 'react-router-dom'
+import React, {useState, useRef} from 'react'
+import {Switch, Route} from 'react-router-dom'
 import {useClose} from '../../hooks/close.hook'
 import {GlobalStyle} from '../../global/GlobalStyle.styled'
-import {Navbar} from '../Navbar/Navbar'
-import { SideNav } from '../SideNav/SideNav'
-import { SideCart } from '../SideCart/SideCart'
+import {MyBlackout} from '../../global/MyBlackout.styled'
 import Pizza from '../../pages/Pizza/Pizza'
-import { useDispatch } from 'react-redux'
-import data from '../../data'
-import {setPizzas} from '../../redux/actions/pizza'
-import { MyBlackout } from '../../global/MyBlackout.styled'
+import {Navbar} from '../Navbar/Navbar'
+import {SideNav} from '../SideNav/SideNav'
+import {SideCart} from '../SideCart/SideCart'
+import { Drinks } from '../../pages/Drinks/Drinks'
+
 
 const App: React.FC = (props: any) => {
 
@@ -21,12 +20,6 @@ const App: React.FC = (props: any) => {
 
   useClose(sideNavRef, () => setOpenSideNav(false))
   useClose(sideCartRef, () => setOpenSideCart(false))
-
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(setPizzas(data))
-  }, [dispatch])
 
   return (
     <React.Fragment>
@@ -55,6 +48,7 @@ const App: React.FC = (props: any) => {
 
       <Switch>
         <Route path='/' exact component={Pizza}/>
+        <Route path='/drinks' component={Drinks}/>
       </Switch>
       
     </React.Fragment>

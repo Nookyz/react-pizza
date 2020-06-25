@@ -12,7 +12,7 @@ import {
 } from './SideCart.styled'
 import { useSelector } from 'react-redux'
 import {AppState} from '../../redux/configureStore'
-import {PizzasCart} from '../../redux/types/Cart'
+import {ICart} from '../../redux/types/Cart'
 
 interface ISideCartProps {
   sideCartRef: React.RefObject<HTMLDivElement> | null
@@ -49,7 +49,7 @@ export const SideCart: React.FC<ISideCartProps> = (props) => {
 
         <MySideCartOrder>
           {items.length ? 
-            items.map((item: PizzasCart, index: number)=>{
+            items.map((item: ICart, index: number)=>{
               return (
                 <Cart 
                 key={index}

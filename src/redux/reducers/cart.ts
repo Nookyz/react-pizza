@@ -1,24 +1,24 @@
 import {PizzasCartActionTypes, PizzasCartAction} from '../types/actions'
-import {PizzasCart, IPizzasCartState} from '../types/Cart'
+import {ICart, ICartState} from '../types/Cart'
 
-const initialState: IPizzasCartState = {
+const initialState: ICartState = {
   items: [],
   quantity: 0,
   totalPrice: 0
 }
 
-export const cartReducer = (state = initialState, action: PizzasCartAction): IPizzasCartState => {
+export const cartReducer = (state = initialState, action: PizzasCartAction): ICartState => {
 
   switch(action.type){
     case PizzasCartActionTypes.ADD_TO_CART:
-      const existPizza = state.items.find((item: PizzasCart) => action.payload.id === item.id)
+      const existPizza = state.items.find((item: ICart) => action.payload.id === item.id)
 
       if(existPizza){
         return {
           ...state,
           quantity: state.quantity + 1,
           totalPrice: state.totalPrice + existPizza.prize,
-          items: state.items.map((item: PizzasCart) => {
+          items: state.items.map((item: ICart) => {
             if(item.id === action.payload.id){
               item.quantity = item.quantity + 1
               item.totalPrice = item.prize * item.quantity
@@ -46,8 +46,8 @@ export const cartReducer = (state = initialState, action: PizzasCartAction): IPi
       return {
         ...state,
         quantity: state.quantity - 1,
-        totalPrice: state.totalPrice - deletedPizza!.prize, // 1!!
-        items: state.items.map((item: PizzasCart) => {
+        totalPrice: state.totalPrice - deletedPizza!.prize,
+        items: state.items.map((item: ICart) => {
           if(item.id === action.payload){
             item.quantity = item.quantity - 1
             item.totalPrice = item.prize * item.quantity
