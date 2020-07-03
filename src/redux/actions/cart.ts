@@ -7,12 +7,12 @@ export const addToCart = (item: Pizzas | Drinks) => ({
   payload: item
 })
 
-export const deleteFromCard = (id: number) => ({
+export const deleteFromCard = (id: string) => ({
   type: PizzasCartActionTypes.DELETE_FROM_CART,
   payload: id
 })
 
-export const removeFromCard = (id: number) => ({
+export const removeFromCard = (id: string) => ({
   type: PizzasCartActionTypes.REMOVE_FROM_CART,
   payload: id
 })

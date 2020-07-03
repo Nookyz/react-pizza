@@ -4,10 +4,8 @@ import { NavLink } from 'react-router-dom'
 import { 
   MySideMenu,
   MySideMenuTitle,
-  //MySideMenuToggle,
   MySideMenuNav,
   MySideMenuAbout,
-  
 } from './SideNav.styled'
 
 interface ISideNavProps {
@@ -34,25 +32,14 @@ export const SideNav: React.FC<ISideNavProps> = (props) => {
           </div>
 
         </MySideMenuTitle>
-
-        {/* <MySideMenuToggle>
-          <button>city</button>
-          <button>theme</button>
-        </MySideMenuToggle> */}
         
         <MySideMenuNav>
 
-          <div className='nav-link'>
-            <NavLink to='/stocks'  activeClassName="active">Акции</NavLink>
-          </div>
           <div className='nav-link'>
             <NavLink to='/' exact activeClassName="active">Пицца</NavLink>
           </div>
           <div className='nav-link'>
             <NavLink to='/drinks' activeClassName="active">Напитки</NavLink>
-          </div>
-          <div className='nav-link'>
-            <NavLink to='/desserts' activeClassName="active">Десерты</NavLink>
           </div>
 
         </MySideMenuNav>

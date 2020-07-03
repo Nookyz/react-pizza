@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-
 import {
   header_height, 
   border_color,

@@ -44,16 +44,10 @@ export const Navbar: React.FC<INavbarProps> = (props) => {
             <div className='navigation'>
 
               <div className='nav-link'>
-                <NavLink to='/stocks'  activeClassName="active">Акции</NavLink>
-              </div>
-              <div className='nav-link'>
                 <NavLink to='/' exact activeClassName="active">Пицца</NavLink>
               </div>
               <div className='nav-link'>
                 <NavLink to='/drinks' activeClassName="active">Напитки</NavLink>
-              </div>
-              <div className='nav-link'>
-                <NavLink to='/about' activeClassName="active">About</NavLink>
               </div>
 
             </div>

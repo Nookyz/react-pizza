@@ -86,7 +86,7 @@ export const MyHeaderNav = styled.div`
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     @media screen and (max-width: 1250px){
       padding: 0 120px;

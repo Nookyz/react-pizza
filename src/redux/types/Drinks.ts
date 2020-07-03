@@ -1,5 +1,5 @@
 export interface Drinks {
-  id: number
+  id: string
   title: string
   volume: string
   prize: number

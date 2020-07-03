@@ -1,7 +1,7 @@
 export const pizzasData = [
   [
     {
-      "id": 1,
+      "id": '1',
       "title": "Пицца Пепперони с томатами",
       "toppings": ["Моцарелла", "Пепперони", "Помидоры", "Соус Барбекю"],
       "size": 30,
@@ -10,7 +10,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_mobile/2018/02/28/%D0%9F%D0%B5%D0%BF%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D0%B8_%D0%B8_%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D1%8B_300dpi-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 2,
+      "id": '2',
       "title": "Пицца Пепперони с томатами",
       "toppings": ["Моцарелла", "Пепперони", "Помидоры", "Соус Барбекю"],
       "size": 35,
@@ -19,7 +19,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_mobile/2018/02/28/%D0%9F%D0%B5%D0%BF%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D0%B8_%D0%B8_%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D1%8B_300dpi-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 3,
+      "id": '3',
       "title": "Пицца Пепперони с томатами",
       "toppings": ["Моцарелла", "Пепперони", "Помидоры", "Соус Барбекю"],
       "size": 40,
@@ -30,7 +30,7 @@ export const pizzasData = [
   ],
   [
     {
-      "id": 4,
+      "id": '4',
       "title": "Пицца Маргарита",
       "toppings": ["Моцарелла", "Соус Domino's"],
       "size": 30,
@@ -39,7 +39,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 5,
+      "id": '5',
       "title": "Пицца Маргарита",
       "toppings": ["Моцарелла", "Соус Domino's"],
       "size": 35,
@@ -48,7 +48,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 6,
+      "id": '6',
       "title": "Пицца Маргарита",
       "toppings": ["Моцарелла", "Соус Domino's"],
       "size": 40,
@@ -59,7 +59,7 @@ export const pizzasData = [
   ],
   [
     {
-      "id": 7,
+      "id": '7',
       "title": "Пицца Пепперони Блюз",
       "toppings": ["Бергадер Блю", "Моцарелла", "Пепперони", "Соус Альфредо"],
       "size": 30,
@@ -68,7 +68,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_mobile/2018/02/28/%D0%9F%D0%B5%D0%BF%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D0%B8_%D0%91%D0%BB%D1%8E%D0%B7_300dpi-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 8,
+      "id": '8',
       "title": "Пицца Пепперони Блюз",
       "toppings": ["Бергадер Блю", "Моцарелла", "Пепперони", "Соус Альфредо"],
       "size": 35,
@@ -77,7 +77,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_mobile/2018/02/28/%D0%9F%D0%B5%D0%BF%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D0%B8_%D0%91%D0%BB%D1%8E%D0%B7_300dpi-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 9,
+      "id": '9',
       "title": "Пицца Пепперони Блюз",
       "toppings": ["Бергадер Блю", "Моцарелла", "Пепперони", "Соус Альфредо"],
       "size": 40,
@@ -88,7 +88,7 @@ export const pizzasData = [
   ],
   [
     {
-      "id": 10,
+      "id": '10',
       "title": "Пицца Тони Пепперони",
       "toppings": ["Моцарелла", "Пепперони", "Соус Domino's"],
       "size": 30,
@@ -97,7 +97,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9F%D0%B5%D0%BF%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D0%B8_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 11,
+      "id": '11',
       "title": "Пицца Тони Пепперони",
       "toppings": ["Моцарелла", "Пепперони", "Соус Domino's"],
       "size": 35,
@@ -106,7 +106,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9F%D0%B5%D0%BF%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D0%B8_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 12,
+      "id": '12',
       "title": "Пицца Тони Пепперони",
       "toppings": ["Моцарелла", "Пепперони", "Соус Domino's"],
       "size": 40,
@@ -117,7 +117,7 @@ export const pizzasData = [
   ],
   [
     {
-      "id": 13,
+      "id": '13',
       "title": "Пицца Гавайская",
       "toppings": ["Курица", "Ананас", "Моцарелла", "Соус Domino's"],
       "size": 30,
@@ -126,7 +126,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%93%D0%B0%D0%B2%D0%B0%D0%B9%D1%81%D1%8C%D0%BA%D0%B0_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 14,
+      "id": '14',
       "title": "Пицца Гавайская",
       "toppings": ["Курица", "Ананас", "Моцарелла", "Соус Domino's"],
       "size": 35,
@@ -135,7 +135,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%93%D0%B0%D0%B2%D0%B0%D0%B9%D1%81%D1%8C%D0%BA%D0%B0_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 15,
+      "id": '15',
       "title": "Пицца Гавайская",
       "toppings": ["Курица", "Ананас", "Моцарелла", "Соус Domino's"],
       "size": 40,
@@ -146,7 +146,7 @@ export const pizzasData = [
   ],
   [
     {
-      "id": 16,
+      "id": '16',
       "title": "Пицца Кантри",
       "toppings": ["Лук", "Бекон", "Ветчина", "Грибы", "Моцарелла", "Огурцы маринованные", "Соус Чесночный"],
       "size": 30,
@@ -155,7 +155,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9A%D0%B0%D0%BD%D1%82%D1%80%D0%B8_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 17,
+      "id": '17',
       "title": "Пицца Кантри",
       "toppings": ["Лук", "Бекон", "Ветчина", "Грибы", "Моцарелла", "Огурцы маринованные", "Соус Чесночный"],
       "size": 35,
@@ -164,7 +164,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9A%D0%B0%D0%BD%D1%82%D1%80%D0%B8_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 18,
+      "id": '18',
       "title": "Пицца Кантри",
       "toppings": ["Лук", "Бекон", "Ветчина", "Грибы", "Моцарелла", "Огурцы маринованные", "Соус Чесночный"],
       "size": 40,
@@ -175,7 +175,7 @@ export const pizzasData = [
   ],
   [
     {
-      "id": 19,
+      "id": '19',
       "title": "Пицца Овощная Феерия",
       "toppings": ["Оливки", "Лук", "Болгарский перец", "Грибы", "Моцарелла", "Помидоры", "Соус Domino's"],
       "size": 30,
@@ -184,7 +184,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%BE%D0%B2%D0%BE%D1%87%D1%8D%D0%B2%D0%B0_%D1%84%D1%8D%D0%B5%D1%80%D0%B8%D1%8F_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 20,
+      "id": '20',
       "title": "Пицца Овощная Феерия",
       "toppings": ["Оливки", "Лук", "Болгарский перец", "Грибы", "Моцарелла", "Помидоры", "Соус Domino's"],
       "size": 35,
@@ -193,7 +193,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%BE%D0%B2%D0%BE%D1%87%D1%8D%D0%B2%D0%B0_%D1%84%D1%8D%D0%B5%D1%80%D0%B8%D1%8F_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 21,
+      "id": '21',
       "title": "Пицца Овощная Феерия",
       "toppings": ["Оливки", "Лук", "Болгарский перец", "Грибы", "Моцарелла", "Помидоры", "Соус Domino's"],
       "size": 40,
@@ -204,7 +204,7 @@ export const pizzasData = [
   ],
   [
     {
-      "id": 22,
+      "id": '22',
       "title": "Пицца Баварская",
       "toppings": ["Пармезан", "Колбаски баварские", "Моцарелла", "Соус Барбекю"],
       "size": 30,
@@ -213,7 +213,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%91%D0%B0%D0%B2%D0%B0%D1%80%D1%81%D0%BA%D0%B0%D1%8F_72dpi-min-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 22,
+      "id": '23',
       "title": "Пицца Баварская",
       "toppings": ["Пармезан", "Колбаски баварские", "Моцарелла", "Соус Барбекю"],
       "size": 35,
@@ -222,7 +222,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%91%D0%B0%D0%B2%D0%B0%D1%80%D1%81%D0%BA%D0%B0%D1%8F_72dpi-min-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 22,
+      "id": '24',
       "title": "Пицца Баварская",
       "toppings": ["Пармезан", "Колбаски баварские", "Моцарелла", "Соус Барбекю"],
       "size": 40,
@@ -233,7 +233,7 @@ export const pizzasData = [
   ],
   [
     {
-      "id": 23,
+      "id": '25',
       "title": "Пицца Пять Сыров",
       "toppings": ["Фета", "Пармезан", "Бергадер Блю", "Моцарелла", "Соус Альфредо", "Чеддер"],
       "size": 30,
@@ -242,7 +242,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9F%D1%8F%D1%82%D1%8C_%D1%81%D1%8B%D1%80%D0%BE%D0%B2_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 24,
+      "id": '26',
       "title": "Пицца Пять Сыров",
       "toppings": ["Фета", "Пармезан", "Бергадер Блю", "Моцарелла", "Соус Альфредо", "Чеддер"],
       "size": 35,
@@ -251,7 +251,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9F%D1%8F%D1%82%D1%8C_%D1%81%D1%8B%D1%80%D0%BE%D0%B2_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 25,
+      "id": '27',
       "title": "Пицца Пять Сыров",
       "toppings": ["Фета", "Пармезан", "Бергадер Блю", "Моцарелла", "Соус Альфредо", "Чеддер"],
       "size": 40,
@@ -262,7 +262,7 @@ export const pizzasData = [
   ],
   [
     {
-      "id": 26,
+      "id": '28',
       "title": "Пицца Шпинат и Фета",
       "toppings": ["Фета", "Оливки", "Болгарский перец", "Грибы", "Моцарелла", "Помидоры", "Соус Альфредо", "Шпинат"],
       "size": 30,
@@ -271,7 +271,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D1%88%D0%BF%D0%B8%D0%BD%D0%B0%D1%82%D1%84%D0%B5%D1%82%D0%B0_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 27,
+      "id": '29',
       "title": "Пицца Шпинат и Фета",
       "toppings": ["Фета", "Оливки", "Болгарский перец", "Грибы", "Моцарелла", "Помидоры", "Соус Альфредо", "Шпинат"],
       "size": 35,
@@ -280,7 +280,7 @@ export const pizzasData = [
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D1%88%D0%BF%D0%B8%D0%BD%D0%B0%D1%82%D1%84%D0%B5%D1%82%D0%B0_300dpi-min-thumbnail-960x960-70.jpg"
     },
     {
-      "id": 28,
+      "id": '30',
       "title": "Пицца Шпинат и Фета",
       "toppings": ["Фета", "Оливки", "Болгарский перец", "Грибы", "Моцарелла", "Помидоры", "Соус Альфредо", "Шпинат"],
       "size": 40,
@@ -294,14 +294,14 @@ export const pizzasData = [
 export const drinksData = [
   [
     {
-      "id": 29,
+      "id": '31',
       "title": "Pepsi",
       "volume": '500 мл',
       "prize": 35,
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Pepsi_05L_Blue-thumbnail-960x960.png"
     },
     {
-      "id": 30,
+      "id": '32',
       "title": "Pepsi",
       "volume": '1 л',
       "prize": 40,
@@ -310,14 +310,14 @@ export const drinksData = [
   ],
   [
     {
-      "id": 31,
+      "id": '33',
       "title": "7 Up",
       "volume": '500 мл',
       "prize": 35,
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/7up_05L_Fido_Dido_01__2019_04_04-thumbnail-960x960.png"
     },
     {
-      "id": 32,
+      "id": '34',
       "title": "7 Up",
       "volume": '1 л',
       "prize": 40,
@@ -326,14 +326,14 @@ export const drinksData = [
   ],
   [
     {
-      "id": 33,
+      "id": '35',
       "title": "Mirinda Апельсин",
       "volume": '500 мл',
       "prize": 35,
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Mirinda_05L_orange-thumbnail-960x960.png"
     },
     {
-      "id": 34,
+      "id": '36',
       "title": "Mirinda Апельсин",
       "volume": '1 л',
       "prize": 40,
@@ -342,14 +342,14 @@ export const drinksData = [
   ],
   [
     {
-      "id": 35,
+      "id": '37',
       "title": "Aqua Minerale",
       "volume": '500 мл',
       "prize": 24,
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Aqua_Minerale_05_gaz-thumbnail-960x960.png"
     },
     {
-      "id": 36,
+      "id": '38',
       "title": "Aqua Minerale",
       "volume": '1 л',
       "prize": 30,
@@ -358,14 +358,14 @@ export const drinksData = [
   ],
   [
     {
-      "id": 37,
+      "id": '39',
       "title": "Lipton Ice Tea Лимон",
       "volume": '500 мл',
       "prize": 31,
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Lipton_05_lemon-thumbnail-960x960.png"
     },
     {
-      "id": 38,
+      "id": '40',
       "title": "Lipton Ice Tea Лимон",
       "volume": '1 л',
       "prize": 41,
@@ -374,14 +374,14 @@ export const drinksData = [
   ],
   [
     {
-      "id": 39,
+      "id": '41',
       "title": "Яблочный сок Sandora",
       "volume": '500 мл',
       "prize": 35,
       "img": "https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/09/04/Sandora-950-Apple_Engle_copy-thumbnail-960x960.png"
     },
     {
-      "id": 40,
+      "id": '42',
       "title": "Яблочный сок Sandora",
       "volume": '1 л',
       "prize": 50,

@@ -57,12 +57,12 @@ export type AddToCart = {
 
 export type DeleteFromCard = {
   type: typeof PizzasCartActionTypes.DELETE_FROM_CART
-  payload: number
+  payload: string
 }
 
 export type RemoveFromCart = {
   type: typeof PizzasCartActionTypes.REMOVE_FROM_CART
-  payload: number
+  payload: string
 }
 
 export type PizzasCartAction = AddToCart | DeleteFromCard | RemoveFromCart

@@ -1,5 +1,5 @@
 export interface Pizzas {
-  id: number
+  id: string
   title: string
   toppings: string[]
   size: number
@@ -9,6 +9,6 @@ export interface Pizzas {
 }
 
 export interface IPizzaState {
-  readonly pizzas: Pizzas[][] | []
-  readonly isReady: boolean
+  pizzas: Pizzas[][] | []
+  isReady: boolean
 }

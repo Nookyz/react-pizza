@@ -1,5 +1,5 @@
 export interface ICart {
-  id: number
+  id: string
   title: string
   toppings: string[] 
   size: number 

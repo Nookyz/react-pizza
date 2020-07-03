@@ -9,7 +9,6 @@ import {SideNav} from '../SideNav/SideNav'
 import {SideCart} from '../SideCart/SideCart'
 import { Drinks } from '../../pages/Drinks/Drinks'
 
-
 const App: React.FC = (props: any) => {
 
   const [openSideNav, setOpenSideNav] = useState<boolean>(false)

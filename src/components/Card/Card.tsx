@@ -15,8 +15,6 @@ import {
   MyCardFooterAddButton,
   MyCardFooterPrice,
 } from './Card.styled'
-// import {Pizzas} from '../../redux/types/Pizzas'
-// import {Drinks} from '../../redux/types/Drinks'
 import { useSelector, useDispatch } from 'react-redux'
 import {addToCart, deleteFromCard, removeFromCard} from '../../redux/actions/cart'
 import {ICart} from '../../redux/types/Cart'
@@ -24,7 +22,6 @@ import {AppState} from '../../redux/configureStore'
 import { useHistory } from 'react-router-dom'
 
 interface ICardProps {
-  //itemsCard: Pizzas[] | Drinks[]
   itemsCard: any
 }
 
@@ -99,7 +96,6 @@ export const Card: React.FC<ICardProps> = (props) => {
         : null
         }
         
-
         {
           inCartPizzaHandler() &&
           <MyCardHeaderInCart>
